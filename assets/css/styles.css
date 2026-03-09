@@ -598,7 +598,33 @@ img {
   right: calc(50% - 3rem);
 }
 /*=============== APP ===============*/
+.app__container {
+  background-color: var(--first-color-light);
+  padding: 3rem 1.5rem 0;
+  border-radius: 2rem;
+  row-gap: 3rem;
+  overflow: hidden;
+  transition: background-color 0.4s;
+}
 
+.app__data .section__title {
+  margin-bottom: 0.5rem;
+}
+.app__data {
+  text-align: center;
+}
+.app__description {
+  margin-bottom: 2rem;
+}
+.app__image {
+  width: 260px;
+  height: 310px;
+  justify-self: center;
+}
+.app__img {
+  border-radius: 1.5rem;
+  filter: var(--shadow-img-small);
+}
 /*=============== MAP ===============*/
 
 /*=============== FOOTER ===============*/
@@ -616,7 +642,8 @@ img {
     margin-inline: 1rem;
   }
   .home__image,
-  .reviews__image {
+  .reviews__image,
+  .app__image {
     width: 100%;
   }
   .menu__container {
@@ -647,6 +674,11 @@ img {
     grid-template-columns: repeat(2, 180px);
     justify-content: center;
   }
+  .app__container{
+    width: 380px;
+    margin-inline: auto;
+  }
+
 }
 @media screen and (min-width: 768px) {
   .service__container {
@@ -813,35 +845,60 @@ img {
     justify-content: initial;
     column-gap: 1rem;
   }
-  .reviews__photo{
+  .reviews__photo {
     width: 80px;
   }
-  .reviews__data{
-    row-gap: .5rem;
+  .reviews__data {
+    row-gap: 0.5rem;
   }
-  .reviews__comment{
+  .reviews__comment {
     width: 450px;
     text-align: initial;
   }
   .reviews__comment::after,
-  .reviews__comment::before{
+  .reviews__comment::before {
     font-size: 5rem;
   }
-  .reviews__comment::before{
+  .reviews__comment::before {
     top: -1.5rem;
     left: -3.5rem;
   }
-  .reviews__comment::after{
+  .reviews__comment::after {
     right: -3.5rem;
     bottom: -3rem;
   }
-  .reviews .swiper-button-prev{
-    left: 0.5em;
-
+  .reviews .swiper-button-prev {
+    left: 0.5rem;
   }
 
-  .reviews .swiper-button-next{
+  .reviews .swiper-button-next {
     left: 4rem;
+  }
+  .app{
+    padding-bottom: 4rem;
+  }
+  .app__container{
+    width: initial;
+    grid-template-columns: 420px 360px;
+    justify-content: center;
+    column-gap: 8rem;
+    padding-block: 6rem;
+    border-radius: 4rem;
+  }
+  .app__data,
+  .app__data :is(.section__title,.section__subtitle){
+    text-align: initial;
+  }
+  .app__description{
+    margin-block: .5rem 3rem;
+    padding-right: 2rem;
+  }
+  .app__image{
+    width: 360px;
+    height: 330px;
+  }
+  .app__img{
+    border-radius: 2rem;
   }
 }
 
