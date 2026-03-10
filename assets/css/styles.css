@@ -783,10 +783,10 @@ img {
     backgroun-color 0.4s,
     color 0.4s;
 }
-.footer__button:hover{
+.footer__button:hover {
   background-color: var(--first-color-alt);
 }
-.footer__copy{
+.footer__copy {
   display: block;
   margin-top: 5rem;
   text-align: center;
@@ -794,10 +794,50 @@ img {
   font-size: var(--small-font-size);
 }
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
 
+::-webkit-scrollbar-track {
+  background: hsl(45, 32%, 70%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(45, 32%, 60%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(45, 32%, 50%);
+}
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--body-color);
+  box-shadow: var(--shadow-big);
+  color: var(--title-color);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  border-radius: 0.75rem;
+  z-index: var(--z-tooltip);
+  transition:
+    bottom 0.4s,
+    transform 0.4s,
+    background-color 0.4s,
+    color 0.4s;
+}
+.scrollup:hover {
+  transform: translateY(-0.5rem);
+}
 
 /* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -824,7 +864,7 @@ img {
   .reviews__comment {
     width: 85%;
   }
-  .footer__content{
+  .footer__content {
     gap: 2rem;
   }
 }
@@ -846,7 +886,7 @@ img {
     width: 380px;
     margin-inline: auto;
   }
-  .footer__form{
+  .footer__form {
     width: 360px;
   }
 }
@@ -857,10 +897,10 @@ img {
   .menu__container {
     grid-template-columns: repeat(3, 180px);
   }
-  .footer__content{
+  .footer__content {
     grid-template-columns: repeat(3, max-content);
   }
-  .footer__newsletter{
+  .footer__newsletter {
     grid-column: initial;
   }
 }
@@ -1092,18 +1132,17 @@ img {
     grid-template-columns: repeat(2, max-content);
     gap: 4rem 5rem;
   }
-  .footer{
+  .footer {
     padding-block: 6rem 3rem;
-
   }
-  .footer__container{
-    grid-template-columns: repeat(2,max-content);
+  .footer__container {
+    grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
   }
-  .footer__content{
+  .footer__content {
     column-gap: 5rem;
   }
-  .footer__form{
+  .footer__form {
     width: 330px;
   }
 }
