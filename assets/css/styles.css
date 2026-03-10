@@ -609,8 +609,11 @@ body.dark-theme::-webkit-scrollbar-thumb:hover {
   filter: var(--shadow-img-big);
 }
 /* Swiper class */
-.swiper-button-prev::after,
-.swiper-button-next::after{
+.swiper-button-prev svg,
+.swiper-button-next svg{
+  display:none;
+}
+.revies .swiper-navigation-icon{
   display: none;
 }
 .reviews :is(.swiper-button-prev, .swiper-button-next) {
