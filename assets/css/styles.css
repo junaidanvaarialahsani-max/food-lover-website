@@ -119,12 +119,49 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
+.dark-theme {
+  --first-color-light: hsl(45, 48%, 16%);
+  --title-color: hsl(45, 4%, 95%);
+  --text-color: hsl(45, 4%, 60%);
+  --body-color: hsl(45, 8%, 8%);
+  --container-color: hsl(45, 8%, 12%);
+  --shadow-small: 0 4px 8px hsla(45, 50%, 2%, 0.2);
+  --shadow-big: 0 2px 16px hsla(45, 50%, 2%, 0.6);
+}
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme
+  :is(
+    .button,
+    .home__link:hover,
+    .menu__button,
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover,
+    .footer__social-link:hover,
+    .footer__button:hover
+  ) {
+  color: var(--dark-color);
+}
+.dark-theme .footer {
+  background-color: var(--container-color);
+}
+.dark-theme :is(.footer__social-link, .footer__form) {
+  background-color: var(--body-color);
+}
+body.dark-theme::-webkit-scrollbar-track {
+  background: hsl(45, 8%, 12%);
+}
 
+body.dark-theme::-webkit-scrollbar-thumb {
+  background: hsl(45, 8%, 20%);
+}
+
+body.dark-theme::-webkit-scrollbar-thumb:hover {
+  background: hsl(45, 8%, 24%);
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
@@ -268,7 +305,7 @@ img {
 }
 
 /* Active link */
-.active-link{
+.active-link {
   color: var(--first-color);
 }
 
@@ -572,7 +609,8 @@ img {
   filter: var(--shadow-img-big);
 }
 /* Swiper class */
-.reviews .swiper-navigation-icon {
+.swiper-button-prev::after,
+.swiper-button-next::after{
   display: none;
 }
 .reviews :is(.swiper-button-prev, .swiper-button-next) {
@@ -685,7 +723,7 @@ img {
 .footer {
   background-color: var(--first-color-light);
   padding-block: 4rem 2rem;
-  transition: backgroun-color 0.4s;
+  transition: background-color 0.4s;
 }
 .footer__container {
   row-gap: 3rem;
@@ -725,7 +763,7 @@ img {
   font-size: 1.5rem;
   color: var(--title-color);
   transition:
-    backgroun-color 0.4s,
+    background-color 0.4s,
     box-shadow 0.4s,
     color 0.4s;
 }
@@ -783,7 +821,7 @@ img {
   color: var(--white-color);
   cursor: pointer;
   transition:
-    backgroun-color 0.4s,
+    background-color 0.4s,
     color 0.4s;
 }
 .footer__button:hover {
