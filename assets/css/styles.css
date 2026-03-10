@@ -610,10 +610,10 @@ body.dark-theme::-webkit-scrollbar-thumb:hover {
 }
 /* Swiper class */
 .swiper-button-prev svg,
-.swiper-button-next svg{
-  display:none;
+.swiper-button-next svg {
+  display: none;
 }
-.revies .swiper-navigation-icon{
+.reviews .swiper-navigation-icon {
   display: none;
 }
 .reviews :is(.swiper-button-prev, .swiper-button-next) {
@@ -1189,6 +1189,14 @@ body.dark-theme::-webkit-scrollbar-thumb:hover {
   .footer__form {
     width: 330px;
   }
+  .scrollup {
+    right: 3rem;
+  }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.4;
+  }
+}
